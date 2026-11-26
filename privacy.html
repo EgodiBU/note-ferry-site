@@ -15,9 +15,10 @@
 <p>The app reads Apple Notes in order to export the notes the user selects. It does not send them to the developer.</p>
 
 <h2>Google user data</h2>
-<p>If the user connects Google Drive, the app asks for the <code>drive.file</code> permission only. With it, the app can see and manage only the files and folders it created or that the user opened with it, not the rest of the user's Drive.</p>
+<p>If the user connects Google Drive, the app asks by default for the <code>drive.file</code> permission only. With it, the app can see and manage only the files and folders it created or that the user opened with it, not the rest of the user's Drive.</p>
+<p>The user can optionally turn on &ldquo;Show all my Drive folders&rdquo;. The app then asks for the full <code>drive</code> permission, which allows it to read, change and delete any file in the user's Drive. The app uses it to list folders, to check names and details of files in the chosen destination, and to write exports there. It does not download the contents of the user's other files, and it does not delete, move or rename anything. It replaces a file it did not create only if the user separately chooses that option.</p>
 <ul>
-<li><strong>Use:</strong> to create the export folders, upload the exported documents, update them on later exports, and check whether they already exist.</li>
+<li><strong>Use:</strong> to list and create export folders, upload the exported documents, update them on later exports, and check whether files already exist.</li>
 <li><strong>Storage:</strong> sign-in tokens are kept on the user's Mac in an encrypted file, with the encryption key in the macOS Keychain. A local record of exports (such as note titles, file names and file identifiers) is also kept on the Mac.</li>
 <li><strong>Sharing:</strong> Google user data is not sold, shared with or transferred to anyone, and is not used for advertising or to train AI models.</li>
 </ul>
